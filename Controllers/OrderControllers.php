@@ -79,10 +79,10 @@ class OrderControllers extends ControllerBase {
         $obj->Send['PaymentType'] = "aio";
         $obj->Send['TotalAmount'] = $ord_price;
         $obj->Send['TradeDesc'] = "ecpay 商城購物";
-        $obj->Send['ReturnURL'] = "https://".\Config::$Api."/bang.mvc-web/index.php?action=PayEcpay&controller=PayEcpay";
+        $obj->Send['ReturnURL'] = "https://".\Config::$Api."/front/index.php?action=PayEcpay&controller=PayEcpay";
         $obj->Send['ChoosePayment'] = \ECPay_PaymentMethod::ALL;
-        $obj->Send['OrderResultURL'] = "http://".\Config::$Api."/bang.mvc-web/index.php?action=CreatOrder&controller=PayEcpay";//信用卡付款完成返回此頁
-        $obj->SendExtend['ClientRedirectURL'] = "http://".\Config::$Api."/bang.mvc-web/index.php?action=CreatOrder&controller=PayEcpay";//取號完成後回傳頁面
+        $obj->Send['OrderResultURL'] = "http://".\Config::$Api."/front/index.php?action=CreatOrder&controller=PayEcpay";//信用卡付款完成返回此頁
+        $obj->SendExtend['ClientRedirectURL'] = "http://".\Config::$Api."/front/index.php?action=CreatOrder&controller=PayEcpay";//取號完成後回傳頁面
         $obj->Send['CustomField1'] = $pro_no_string;
         $obj->Send['CustomField2'] = $ord_phone;
         $obj->Send['CustomField3'] = $ord_address;

@@ -4,6 +4,10 @@ use Bang\Lib\Bundle;
 Bundle::Css('test_css', array(
     'Content/css/index.css',
 ));
+
+$frontData1 = Bang\Lib\ResponseBag::Get('front_data1');
+$frontData2 = Bang\Lib\ResponseBag::Get('front_data2');
+
 ?>
 <div style="transform: rotate(-20deg);position: fixed;top: 50px;z-index: 5;left: 10px;">
     <img src="Content/img/title.png" alt="" style="width: 250px;">
@@ -63,27 +67,29 @@ Bundle::Css('test_css', array(
 
 
         <div class="index_productdiv" >
-            <div class="index_product index_product1">
-                <div class="productcardup">
-                    <div class="cardimg">
-                    <img src="./Views/dogeat/DogEatVeg/web/img/tag1.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="1" src="/dogeat_server/Content/img/1_0.jpg" alt="">
-                    <div class="productbtn">彩虹雞胸乾</div>
+            <?php for($i=0;$i<4;$i++) { ?>
+                <div class="index_product index_product1">
+                    <div class="productcardup">
+                        <div class="cardimg">
+                        <img src="./Views/dogeat/DogEatVeg/web/img/tag1.png" alt=""  class="tag">
+                        <img class="product_each_img" data-pro_no="<?= $frontData1[$i]->pro_no ?>" src="<?= json_decode($frontData1[$i]->pro_img) -> img_01 ?>" alt="">
+                        <div class="productbtn"><?= $frontData1[$i]->pro_name ?></div>
+                        </div>
+    
                     </div>
-
+                    <div class="product_textdiv">
+                        <span class="product_text">$<?= $frontData1[$i]->pro_price ?></span>
+                        <button type="button"  class="atc" data-atcnum="<?= $frontData1[$i]->pro_no ?>">
+                            <img src="./Views/dogeat/DogEatVeg/web/img/icon/addtocar3.png" alt="" >
+                        </button>
+                    </div>
                 </div>
-                <div class="product_textdiv">
-                    <span class="product_text">NT$130</span>
-                    <button type="button"  class="atc" data-atcnum="1">
-                        <img src="./Views/dogeat/DogEatVeg/web/img/icon/addtocar3.png" alt="" >
-                    </button>
-                </div>
-            </div>
-            <div class="index_product index_product1">
+            <?php } ?>
+            <!-- <div class="index_product index_product1">
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag2.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="2" src="/dogeat_server/Content/img/2_0.jpg" alt="">
+                    <img class="product_each_img" data-pro_no="2" src="/back/Content/img/2_0.jpg" alt="">
                     <div class="productbtn">菠菜雞胸乾</div>
                     </div>
 
@@ -99,7 +105,7 @@ Bundle::Css('test_css', array(
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag3.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="3" src="/dogeat_server/Content/img/3_0.jpg" alt="">
+                    <img class="product_each_img" data-pro_no="3" src="/back/Content/img/3_0.jpg" alt="">
                     <div class="productbtn">南瓜雞胸乾</div>
                     </div>
 
@@ -115,7 +121,7 @@ Bundle::Css('test_css', array(
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag4.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="4" src="/dogeat_server/Content/img/4_0.jpg" alt="">
+                    <img class="product_each_img" data-pro_no="4" src="/back/Content/img/4_0.jpg" alt="">
                     <div class="productbtn">胡蘿蔔雞胸乾</div>
                     </div>
                 </div>
@@ -125,7 +131,7 @@ Bundle::Css('test_css', array(
                         <img src="./Views/dogeat/DogEatVeg/web/img/icon/addtocar3.png" alt="" >
                     </button>
                 </div>
-            </div> 
+            </div>  -->
         </div> 
         <div class="seemorediv">
             <a href="<?php echo Bang\Lib\Url::Action('product') ?>">
@@ -147,7 +153,25 @@ Bundle::Css('test_css', array(
         </div>
         
         <div class="index_productdiv" >
-            <div class="index_product index_product1">
+            <?php for($i=0;$i<4;$i++) { ?>
+                <div class="index_product index_product1">
+                    <div class="productcardup">
+                        <div class="cardimg">
+                        <img src="./Views/dogeat/DogEatVeg/web/img/tag1.png" alt=""  class="tag">
+                        <img class="product_each_img" data-pro_no="<?= $frontData2[$i]->pro_no ?>" src="<?= json_decode($frontData2[$i]->pro_img) -> img_01 ?>" alt="">
+                        <div class="productbtn"><?= $frontData2[$i]->pro_name ?></div>
+                        </div>
+    
+                    </div>
+                    <div class="product_textdiv">
+                        <span class="product_text">$<?= $frontData2[$i]->pro_price ?></span>
+                        <button type="button"  class="atc" data-atcnum="<?= $frontData2[$i]->pro_no ?>">
+                            <img src="./Views/dogeat/DogEatVeg/web/img/icon/addtocar3.png" alt="" >
+                        </button>
+                    </div>
+                </div>
+            <?php } ?>
+            <!-- <div class="index_product index_product1">
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag1.png" alt=""  class="tag">
@@ -209,7 +233,7 @@ Bundle::Css('test_css', array(
                         <img src="./Views/dogeat/DogEatVeg/web/img/icon/addtocar3.png" alt="" >
                     </button>
                 </div>
-            </div> 
+            </div>  -->
         </div> 
         <div class="seemorediv">
             <a href="<?php echo Bang\Lib\Url::Action('product2') ?>">

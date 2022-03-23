@@ -85,7 +85,7 @@ use Bang\Lib\Bundle;
                     <input type="hidden" name="LogisticsType" value="CVS" />
                     <input type="hidden" name="LogisticsSubType" value="UNIMARTC2C" />
                     <input type="hidden" name="IsCollection" value="N" />
-                    <input type="hidden" name="ServerReplyURL" value="http://<?php echo \Config::$Api ?>/bang.mvc-web/index.php?controller=Home_m&action=check" />
+                    <input type="hidden" name="ServerReplyURL" value="http://<?php echo \Config::$Api ?>/front/index.php?controller=Home_m&action=check" />
                     <input type="submit" id="__paymentButton" value="選擇取件門市" />
                 </form>        
             </div>

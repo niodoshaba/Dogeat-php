@@ -186,13 +186,14 @@ if(!isset($_SESSION["ecpay_return_info"]["MerchantTradeNo"])){
                 <input type="hidden" name="LogisticsType" value="CVS" />
                 <input type="hidden" name="LogisticsSubType" value="UNIMARTC2C" />
                 <input type="hidden" name="IsCollection" value="N" />
-                <input type="hidden" name="ServerReplyURL" value="http://<?php echo \Config::$Api ?>/bang.mvc-web/index.php?controller=Home&action=check" />
+                <input type="hidden" name="ServerReplyURL" value="http://<?php echo \Config::$Api ?>/front/index.php?controller=Home&action=check" />
                 <input type="submit" id="__paymentButton" value="選擇取件門市" />
             </form>
             <br>
             <span>
                 <?php
-                print_r($ecpay_return_info);
+                // print_r($ecpay_return_info);
+                // print_r($_POST);
                     if(isset($_POST["MerchantID"]) && isset($_POST["LogisticsSubType"])){
                         if($_POST["LogisticsSubType"] == "UNIMARTC2C"){
                             $_POST["LogisticsSubType"] = "統一超商";

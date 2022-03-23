@@ -7,7 +7,7 @@ class Config {
      */
     public static $Root = "";
     public static $Path = __DIR__;
-    // public static $Api ="114.25.137.120";
+    public static $Api  = "niodoshaba.byethost17.com/";
     
     /**
      * @var string 網站名稱(會出現在Title 後至)

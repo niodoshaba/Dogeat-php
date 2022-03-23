@@ -13,6 +13,19 @@ use Bang\MVC\ControllerBase;
 class Home extends ControllerBase {
 
     public function index() {
+        $action = array(
+            "controller" => "FrontDeskProductControllers",
+            "action" => "proList",
+            "proCataNo" => "1",
+            );        
+        $this -> GetcUrl("front_data1",$action);
+        $action = array(
+            "controller" => "FrontDeskProductControllers",
+            "action" => "proList",
+            "proCataNo" => "2",
+            );        
+        $this -> GetcUrl("front_data2",$action); 
+
         return $this->View();
     }
 
