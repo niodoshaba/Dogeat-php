@@ -29,6 +29,7 @@
         <div class="socialsign">
             <div class="taiwant_reservoir">
                 <a href="<?php echo Bang\Lib\Url::Action('news') ?>">
+                    <span>串API練習</span>
                     <img style="width: 45px;" src="Content/img/icon/taiwant_reservoir.png">
                 </a>
             </div>
