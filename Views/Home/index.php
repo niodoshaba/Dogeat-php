@@ -175,7 +175,7 @@ $frontData2 = Bang\Lib\ResponseBag::Get('front_data2');
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag1.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="9" src="/dogeat_server/Content/img/9_0.jpg" alt="">
+                    <img class="product_each_img" data-pro_no="9" src="/back/Content/img/9_0.jpg" alt="">
                     <div class="productbtn">紫甘藍粉粉</div>
                     </div>
 
@@ -191,7 +191,7 @@ $frontData2 = Bang\Lib\ResponseBag::Get('front_data2');
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag2.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="10" src="/dogeat_server/Content/img/10_0.jpg" alt="">
+                    <img class="product_each_img" data-pro_no="10" src="/back/Content/img/10_0.jpg" alt="">
                     <div class="productbtn">菠菜粉粉</div>
                     </div>
 
@@ -207,7 +207,7 @@ $frontData2 = Bang\Lib\ResponseBag::Get('front_data2');
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag3.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="11" src="/dogeat_server/Content/img/11_0.jpg" alt="">
+                    <img class="product_each_img" data-pro_no="11" src="/back/Content/img/11_0.jpg" alt="">
                     <div class="productbtn">南瓜粉粉</div>
                     </div>
 
@@ -223,7 +223,7 @@ $frontData2 = Bang\Lib\ResponseBag::Get('front_data2');
                 <div class="productcardup">
                     <div class="cardimg">
                     <img src="./Views/dogeat/DogEatVeg/web/img/tag4.png" alt=""  class="tag">
-                    <img class="product_each_img" data-pro_no="12" src="/dogeat_server/Content/img/12_0.jpg" alt="">
+                    <img class="product_each_img" data-pro_no="12" src="/back/Content/img/12_0.jpg" alt="">
                     <div class="productbtn">胡蘿蔔粉粉</div>
                     </div>
                 </div>

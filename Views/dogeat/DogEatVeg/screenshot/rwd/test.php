@@ -4,7 +4,7 @@
 $userData = "action=proList&proCataNo=1";
 // $userData = "action=vegBenefit&vegNo=1";
 
-$curl = curl_init("http://192.168.56.103/dogeat_server/api.php?$userData");
+$curl = curl_init("http://192.168.56.103/back/api.php?$userData");
 
 curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 1); //SSL
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);//SSL
